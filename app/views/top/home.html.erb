@@ -1,5 +1,16 @@
 <div class="hero-unit">
-
+  <h1>Relay4へようこそ!</h1>
+  <p>
+    Relay4は、グループが毎日交代で何かをやっていくのを支援するサービスです。
+    グループのメンバーが多くなると、交代で行うこともわかりにくくなりがち。
+    Relay4をつかって、そんな悩みを解消しましょう♪
+  </p>
+  <p>
+    使い方はとっても簡単。
+    <%= link_to 'こちら', new_team_path %>からグループ名、開始日、メンバーのFacebook URLを1行に１つづつ、順番に入れて完了です。
+  </p>
+  <p>
+    <%= link_to '交代で行う何かを作成する', new_team_path,
+                class: 'btn btn-primary' %>
+  </p>
 </div>
-<h1>Top#home</h1>
-<p>Find me in app/views/top/home.html.erb</p>
