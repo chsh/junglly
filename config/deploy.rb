@@ -5,9 +5,9 @@ Dir['config/deploy/*.rb'].each { |recipe| load recipe }
 
 ssh_options[:forward_agent] = true
 
-set :application, "relay4"
+set :application, "junglly"
 set :scm, :git
-set :repository,  "git@codeplane.com:chsh/relay4.git"
+set :repository,  "git@codeplane.com:chsh/junglly.git"
 
 set :user, 'deployer'
 set :rails_env, :production

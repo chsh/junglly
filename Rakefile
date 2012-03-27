@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Relay4::Application.load_tasks
+Junglly::Application.load_tasks

@@ -1,4 +1,4 @@
-Relay4::Application.routes.draw do
+Junglly::Application.routes.draw do
   resources :teams
 
   root to: 'top#home'
