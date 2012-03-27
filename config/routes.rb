@@ -1,5 +1,5 @@
 Junglly::Application.routes.draw do
-  resources :teams
-
   root to: 'top#home'
+  match '/:id' => 'teams#show', constraints: { id: /\d+/ }
+  resources :teams
 end
