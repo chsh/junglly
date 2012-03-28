@@ -13,7 +13,12 @@ class TeamsController < ApplicationController
   # GET /teams/1
   # GET /teams/1.json
   def show
-    redirect_to "/#{params[:id]}"
+    @team = Team.find(params[:id])
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @team }
+    end
   end
 
   # GET /teams/new
