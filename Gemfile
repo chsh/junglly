@@ -41,3 +41,10 @@ gem 'capistrano'
 gem 'devise'
 gem 'omniauth-facebook'
 gem 'koala'
+
+gem 'configuration'
+gem 'ruby_tweaks', git: 'git://github.com/chsh/ruby_tweaks.git'
+
+group :development, :test do
+  gem 'rspec-rails'
+end
