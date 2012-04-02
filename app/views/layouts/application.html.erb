@@ -20,6 +20,17 @@
             <ul class="nav">
               <li class="active"><%= link_to 'Teams', teams_path %></li>
             </ul>
+            <ul class="nav pull-right">
+              <% if current_user %>
+                  <li><%= link_to current_user.name, destroy_user_session_path, method: :delete %></li>
+              <% else %>
+                  <li>
+                    <%= link_to 'Signin with facebook',
+                                user_omniauth_authorize_path(:facebook)
+                    %>
+                  </li>
+              <% end %>
+            </ul>
           </div><!--/.nav-collapse -->
         </div>
       </div>
