@@ -38,3 +38,13 @@ gem 'capistrano'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+gem 'devise'
+gem 'omniauth-facebook'
+gem 'koala'
+
+gem 'configuration'
+gem 'ruby_tweaks', git: 'git://github.com/chsh/ruby_tweaks.git'
+
+group :development, :test do
+  gem 'rspec-rails'
+end

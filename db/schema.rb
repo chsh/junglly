@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120323161759) do
+ActiveRecord::Schema.define(:version => 20120401170050) do
 
   create_table "teams", :force => true do |t|
     t.string   "name"
@@ -21,5 +21,14 @@ ActiveRecord::Schema.define(:version => 20120323161759) do
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end
+
+  create_table "users", :force => true do |t|
+    t.string   "facebook_user_id", :null => false
+    t.text     "facebook_profile"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  add_index "users", ["facebook_user_id"], :name => "index_users_on_facebook_user_id", :unique => true
 
 end
