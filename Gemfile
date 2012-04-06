@@ -48,3 +48,5 @@ gem 'ruby_tweaks', git: 'git://github.com/chsh/ruby_tweaks.git'
 group :development, :test do
   gem 'rspec-rails'
 end
+
+gem 'slim-rails'
