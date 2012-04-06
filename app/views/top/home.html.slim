@@ -1,0 +1,12 @@
+.hero-unit
+  h1 Jungllyへようこそ!
+  p
+    | Jungllyは、グループが毎日交代で何かをやっていくのを支援するサービスです。
+      グループのメンバーが多くなると、交代で行うこともわかりにくくなりがち。
+      Jungllyをつかって、そんな悩みを解消しましょう♪
+  p
+    | 使い方はとっても簡単。
+    = link_to 'こちら', new_team_path
+    | からグループ名、開始日、メンバーのFacebook URLを1行に１つづつ、順番に入れて完了です。
+  p
+    = link_to '交代で行う何かを作成する', new_team_path, class: 'btn btn-primary'

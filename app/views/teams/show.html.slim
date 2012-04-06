@@ -1,0 +1,30 @@
+p#notice = notice if notice.present?
+
+.row
+  .span6.offset3
+    h1 = @team.name
+.row
+  .span6.offset3
+    hr
+
+- today = Date.today
+- @team.current_members.each do |member|
+  .row
+    .span1.offset3
+      = link_to image_tag(member.icon_url), member.link
+    .span3
+      - if member.charged_at < today
+        h2(style="color: #808080;") = member.name
+      - else
+        h2 = member.name
+    .span2
+      - if member.charged_at == today
+        h2(style="color: red") = date_format(member.charged_at)
+      - elsif member.charged_at < today
+        h2(style="color: #808080;") = date_format(member.charged_at)
+      - else
+        h2 = date_format(member.charged_at)
+
+.row
+  = link_to 'Back', teams_path
+
