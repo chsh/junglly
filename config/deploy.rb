@@ -15,7 +15,7 @@ set :keep_releases, 2
 
 task :live do
 
-  set :domain, 'u6.skr.network-servers.net'
+  set :domain, 'u7.skr.network-servers.net'
 
   role :app, domain
   role :web, domain
